@@ -41,6 +41,7 @@
             position: absolute;
             left: 50%;
             top: 50%;
+            scale:0.6;
             transform: translate(-50%, -50%);
             animation: slideLogo 1s cubic-bezier(.51,1.01,.34,.97) forwards;
             text-align: center;
@@ -82,15 +83,16 @@
             font-weight: 400;
             font-style: normal;
             padding: 5px 15px;
+            text-decoration: none;
             border-radius: 20px;
             background: linear-gradient(to right, #444, #b8b1b1);
             color: black;
             transition: all 0.3s ease-in-out;
             font-size: 1rem;
             background: rgba(217, 217, 217, 0.37);
-border: 1px solid #FFFFFF;
-box-shadow: -1px 4px 0px rgba(0, 0, 0, 0.25);
-border-radius: 17px;
+            border: 1px solid #FFFFFF;
+            box-shadow: -1px 4px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 17px;
         }
 
         .preregis:hover {
@@ -271,10 +273,10 @@ border-radius: 17px;
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").textContent = days;
-            document.getElementById("hours").textContent = hours;
-            document.getElementById("minutes").textContent = minutes;
-            document.getElementById("seconds").textContent = seconds;
+            document.getElementById("days").textContent = days>=10?days:'0'+days;
+            document.getElementById("hours").textContent = hours>=10?hours:'0'+hours;
+            document.getElementById("minutes").textContent = minutes>=10?minutes:'0'+minutes;
+            document.getElementById("seconds").textContent = seconds>=10?seconds:'0'+seconds;
         }, 1000);
     </script>
 </body>
