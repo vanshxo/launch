@@ -26,7 +26,6 @@ a{
         .background-video {
 
 
-            animation: bganimation 1.5 ease-in-out 1 forwards;
             background-blend-mode: plus-darker;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
             position: fixed;
@@ -36,7 +35,8 @@ a{
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            opacity: 0.4;
+            opacity: 0.7;
+            animation: bganimation 1.5 ease-in-out 1 forwards;
         }
 
         .wrapper {
@@ -49,14 +49,14 @@ a{
         }
 
         .logo-container {
-            background-blend-mode: plus-darker;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            /* background-blend-mode: plus-darker; */
+            /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
             position: absolute;
             left: 50%;
             top: 45%;
             scale:0.7;
             transform: translate(-50%, -50%);
-            animation: slideLogo 2s cubic-bezier(.51,1.01,.34,.97) forwards;
+            animation: slideLogo 2s cubic-bezier(0,.89,.28,1.01) forwards;
             text-align: center;
         }
 
@@ -84,12 +84,12 @@ a{
             width: 2px;
             background: rgb(0, 0, 0);
             opacity: 0;
-            animation: fadeIn 1s forwards 2s;
+            animation: fadeIn 1s forwards 1.4s;
         }
 
         .preregis {
             position: absolute;
-            bottom: 10%;
+            bottom: 20%;
             
             left: 50%;
             transform: translateX(-50%);
@@ -99,7 +99,7 @@ a{
             font-family: "Michroma", sans-serif;
             font-weight: 400;
             font-style: normal;
-            padding: 5px 15px;
+            padding: 15px 15px;
             border-radius: 20px;
             background: linear-gradient(to right, #444, #b8b1b1);
             color: black;
@@ -185,8 +185,8 @@ border-radius: 17px;
                 transform: translate(-50%, -50%);
             }
             100% {
-                left: 10%;
-                transform: translateY(-50%);
+                left: 30%;
+                transform: translateY(-50%,-50%);
             }
         }
         @keyframes bganimation {
@@ -194,27 +194,28 @@ border-radius: 17px;
                 opacity: 0;
             }
             100%{
-                opacity: 1;
+                opacity: 0.7;
             }
         }
         @keyframes slideCountdown {
             0%{
                 opacity:0;
-                right: 50%;
+                right: 30%;
                 transform: translateY(-50%);
             }
             75%{
                 opacity:  0;
-                right: 50%;
+                right: 30%;
                 transform: translateY(-50%);
 
             }
             90% {
-                opacity:  1;
-                right: 50%;
+                opacity: 0;
+                right: 30%;
                 transform: translateY(-50%);
             }
             100% {
+                opacity: 1;
                 right: 15%;
                 transform: translateY(-50%);
             }
@@ -298,7 +299,7 @@ border-radius: 17px;
         <div class="separator"></div>
 
         <div class="countdown-container">
-            <div style="color: black; font-size: 30px;" >launching in</div>
+            <div style="color: black; font-size: 30px;text-shadow: #444;" >launching in</div>
             <div class="countdown-spinner">
                 <div class="spinner">
                     <span id="days">00</span>
