@@ -179,6 +179,17 @@
                 opacity: 1;
             }
         }
+        @keyframes slowMove {
+        0% {
+            transform: translateX(-10%) translateY(-10%);
+        }
+        50% {
+            transform: translateX(10%) translateY(10%);
+        }
+        100% {
+            transform: translateX(-10%) translateY(-10%);
+        }
+        }
 
         @media (max-width: 768px) {
     .logo-container {
@@ -245,15 +256,15 @@
                 </div>
                 <div class="spinner">
                     <span id="hours">00</span>
-                    <span class="spinner-label">Hours</span>
+                    <span class="spinner-label">Hrs</span>
                 </div>
                 <div class="spinner">
                     <span id="minutes">00</span>
-                    <span class="spinner-label">Minutes</span>
+                    <span class="spinner-label">Mins</span>
                 </div>
                 <div class="spinner">
                     <span id="seconds">00</span>
-                    <span class="spinner-label">Seconds</span>
+                    <span class="spinner-label">Secs</span>
                 </div>
             </div>
         </div>
