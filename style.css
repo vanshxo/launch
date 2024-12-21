@@ -31,7 +31,7 @@ header .logo {
   max-width: 430px;
   width: 100%;
   padding: 30px;
-  border: solid;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 0px;
   background: #FFF;
 }
@@ -66,6 +66,8 @@ form {
   position: relative;
   height: 50px;
   width: 100%;
+  padding: 2px;
+  cursor: pointer;
   margin-top: 20px;
   border-radius: 6px;
 }
@@ -74,6 +76,7 @@ form {
 .field button {
   height: 100%;
   width: 100%;
+  padding: 2px;
   border: none;
   font-size: 16px;
   font-weight: 400;
