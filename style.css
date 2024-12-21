@@ -103,13 +103,13 @@ form {
 
 .field button {
   color: #fff;
-  background-color: #0171d3;
+  background-color: #2E9A6C;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .field button:hover {
-  background-color: #016dcb;
+  background-color: #18c97c;
 }
 
 .form-link {
